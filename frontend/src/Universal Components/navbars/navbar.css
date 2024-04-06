@@ -1,0 +1,43 @@
+.navbar-wrapper {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  color: #1e1e1e;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  width: 100%;
+  margin: 0 120px 0 120px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlogo-img {
+  width: 160px;
+  height: 40px;
+}
+
+.navbar-login-button {
+  background-color: #ffa92c;
+  width: 168px;
+  margin-left: 12px;
+}
+
+.navbar-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.navbar-link:hover {
+  color: #ffa92c;
+}

@@ -1,0 +1,13 @@
+body {
+  background-color: #e3e3e3;
+}
+
+
+.homepage-container{
+  margin-top: 72px;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
