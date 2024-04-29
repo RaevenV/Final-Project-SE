@@ -1,6 +1,7 @@
 import React from "react";
 import "./navbar.css";
 import {Link} from "react-router-dom";
+import RegisterButton from "../Login & Register Buttons/registerButton";
 
 
 function HomeNavbar(props) {
@@ -14,7 +15,7 @@ function HomeNavbar(props) {
               Modules
             </Link>
           </div>
-          <div className="navbar-button">
+          <div className="navbar-button1">
             <Link to="/" className="navbar-link">
               Library
             </Link>
@@ -24,7 +25,7 @@ function HomeNavbar(props) {
               Forum
             </Link>
           </div>
-          <div className="navbar-login-button">test</div>
+          <RegisterButton text="Login" link="/"/>
         </div>
       </div>
     </>

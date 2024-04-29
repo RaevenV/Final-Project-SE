@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 417px;
-    margin-top: 24px;
+    margin-top: 52px;
     margin-bottom: 24px;
 }
 
@@ -15,4 +15,5 @@
     align-items: center;
     height: 417px;
     width: 100%;
+    background-color: bisque;
 }
