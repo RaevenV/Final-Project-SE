@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./news.css";
+import { Link } from "react-router-dom";
+import images from "./newsImage";
 
 function News({children}) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -55,9 +57,9 @@ function News({children}) {
     <div className="container__slider" onMouseEnter={AutoPlayStop} onMouseLeave={AutoPlayStart}>
       {children.map((item, index) => {
         return (
-          <div className={"slider__item slider__item-active-" + (activeIndex + 1)} key={index}>
+          <Link to={images[index].link} key={index} className={"slider__item slider__item-active-" + (activeIndex + 1)}>
             {item}
-          </div>
+          </Link>
         );
       })}
 
