@@ -7,14 +7,17 @@ function LibraryNavbar(props) {
     <>
       <div className="navbar-wrapper">
         <div className="navbar-container">
-          <img className="navlogo-img" src="/logo-clear.png" alt="" />
+          <Link to="/" className="navlogo-link">
+            <img className="navlogo-img" src="/logo-clear.png" alt="" />
+          </Link>
+          
           <div className="navbar-button">
             <Link to="/" className="navbar-link">
               Modules
             </Link>
           </div>
-          <div className="navbar-button">
-            <Link to="/" className="navbar-link" style={{ color: "#ffa92c" }}>
+          <div className="navbar-button1">
+            <Link to="/" className="navbar-link">
               Library
             </Link>
           </div>
@@ -23,7 +26,7 @@ function LibraryNavbar(props) {
               Forum
             </Link>
           </div>
-          <div className="navbar-login-button">test</div>
+          <RegisterButton text="Login" link="/" />
         </div>
       </div>
     </>

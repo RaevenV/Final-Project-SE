@@ -16,6 +16,7 @@ function HomePage() {
             return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
           })}
         </News>
+        
         <Footer />
       </div>
     </>

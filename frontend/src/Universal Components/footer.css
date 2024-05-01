@@ -3,6 +3,130 @@
   background-color: #1E1E1E;
   color: white;
   text-align: center;
-  height: 200px;
+  height: 220px;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-wrapper{
+  height: 200px;
+  width: 100%;
+  margin: 0 120px 0 120px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+
+}
+
+.footer-column1{
+  padding: 36px 0 40px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+.footer-logo-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.footer-logo-text{
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-logo-text2{
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-img{
+  width: 220px;
+  height: 50px;
+}
+
+.footer-copyright-container{
+  margin-left: 12px;
+  font-weight: 400;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+}
+
+.footer-copyright-img{
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+
+.footer-column2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 36px 0 44px 12px;
+
+}
+
+.footer-column3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px 0 0 16px;
+
+}
+
+.logo-bar{
+  display: flex;
+  width: 120px;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.column2-row1{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.column2-row2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.office-title-text{
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.office-text{
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-logo-link img{
+  width: 32px;
+  height: 32px;
 }

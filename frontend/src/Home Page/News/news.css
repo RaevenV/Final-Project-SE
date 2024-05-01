@@ -1,6 +1,6 @@
 .container__slider {
     position: relative;
-    width: 80%;
+    width: 83%;
     padding: 0;
     overflow: hidden;
     display: flex;
@@ -9,8 +9,9 @@
     flex-direction: row;
     flex-wrap: nowrap;
     background-color: transparent;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 18px;
+    z-index: 0;
   }
   
   .container__slider > button {
@@ -27,11 +28,13 @@
   }
   
   .slider__btn-next {
+    cursor: pointer;
     position: absolute;
     right: 0;
   }
   
   .slider__btn-prev {
+    cursor: pointer;
     position: absolute;
     left: 0;
   }

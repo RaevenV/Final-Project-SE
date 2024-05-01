@@ -9,7 +9,10 @@ function HomeNavbar(props) {
     <>
       <div className="navbar-wrapper">
         <div className="navbar-container">
-          <img className="navlogo-img" src="/logo-clear.png" alt="" />
+          <Link to="/" className="navlogo-link">
+            <img className="navlogo-img" src="/logo-clear.png" alt="" />
+          </Link>
+          
           <div className="navbar-button">
             <Link to="/" className="navbar-link">
               Modules
@@ -25,7 +28,7 @@ function HomeNavbar(props) {
               Forum
             </Link>
           </div>
-          <RegisterButton text="Login" link="/"/>
+          <RegisterButton text="Login" link="/" />
         </div>
       </div>
     </>
