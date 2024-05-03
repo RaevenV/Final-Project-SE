@@ -1,0 +1,41 @@
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.module-cart-container{
+    width: 360px;
+    height: 372px;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+}
+
+.module-picture{
+    width: 360px;
+    height: 205.02px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.rating-star{
+    width: 128px;
+    height: 18px;
+    margin-top: 10px;
+}
+
+.module-cart-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.module-cart-detail{
+    margin: 10px 10px 10px 10px;
+}

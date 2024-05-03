@@ -4,6 +4,7 @@ import HomeNavbar from "../Universal Components/navbars/homeNavbar";
 import './homePage.css'
 import News from "./News/news";
 import images from "./News/newsImage";
+import TrendingModules from "./Trending Modules/trendingModules"
 
 
 function HomePage() {
@@ -16,7 +17,7 @@ function HomePage() {
             return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
           })}
         </News>
-        
+        <TrendingModules />
         <Footer />
       </div>
     </>
