@@ -1,13 +1,14 @@
-h1{
+.module-cart-title{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 16px;
 }
 
-h3{
+.module-cart-description{
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 12px;
+    margin-top: 10px;
 }
 
 .module-cart-container{
@@ -34,8 +35,9 @@ h3{
     display: flex;
     justify-content: space-between;
     margin-right: 10px;
+    margin-top: 16px;
 }
 
 .module-cart-detail{
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 20px;
 }

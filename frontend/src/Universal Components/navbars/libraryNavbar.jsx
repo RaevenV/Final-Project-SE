@@ -1,6 +1,7 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import RegisterButton from "../Login & Register Buttons/registerButton";
 
 function LibraryNavbar(props) {
   return (
