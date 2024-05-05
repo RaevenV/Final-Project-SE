@@ -1,0 +1,43 @@
+.trendingBooks-text{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+}
+
+.trending-cover-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.cover-container{
+    display: flex; 
+    width: 1100px;
+    height: 400px;
+    margin-bottom: 200px;
+    justify-content: center;
+    border-radius: 18px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.trendingCover1,
+.trendingCover2,
+.trendingCover3{
+    width: 30%; 
+    height: 100%; 
+}
+
+.trendingCover2{
+   margin-left: 40px;
+   margin-right: 40px;
+}
+
+.bookTitle1,
+.bookTitle2,
+.bookTitle3{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}

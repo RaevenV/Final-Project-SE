@@ -5,7 +5,7 @@ import './homePage.css'
 import News from "./News/news";
 import images from "./News/newsImage";
 import TrendingModules from "./Trending Modules/trendingModules"
-
+import TrendingBooks from "./Trending Books/trendingBooks";
 
 function HomePage() {
   return (
@@ -18,6 +18,7 @@ function HomePage() {
           })}
         </News>
         <TrendingModules />
+        <TrendingBooks />
         <Footer />
       </div>
     </>
