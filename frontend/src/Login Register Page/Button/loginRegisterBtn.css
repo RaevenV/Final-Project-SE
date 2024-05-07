@@ -1,0 +1,15 @@
+.login-button-click{
+  background-color: #ffa92c;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 52px;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--white);
+}

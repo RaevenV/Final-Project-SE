@@ -1,0 +1,29 @@
+.register-page-greetings{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.first-time-greetings{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 80px;
+}
+
+.here-greetings{
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 80px;
+}
+
+.register-section-container{
+    background-color: var(--white);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
