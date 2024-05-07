@@ -1,0 +1,28 @@
+.plan-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.plan-title-container{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.plan-period-container{
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.plan-desc-container{
+  color: #929292;
+}
+.plan-desc-container ul{
+  margin-top: 10px;
+}
+
+.plan-desc-container li{
+  margin-top: 5px;
+}

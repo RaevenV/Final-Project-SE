@@ -1,0 +1,18 @@
+.edit-pp-container{
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.pp-container{
+  margin-left: 60px;
+  font-size: 24px;
+  color: #0D5541;
+  font-weight: 600;
+}
+
+.edit-pp-container img{
+  width: 25%;
+}

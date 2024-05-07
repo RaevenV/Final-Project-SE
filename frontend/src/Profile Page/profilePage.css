@@ -1,0 +1,20 @@
+body {
+  background-color: #e3e3e3;
+}
+
+.profilePage-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 70vh;
+  margin-top: 72px;
+  margin-bottom: 60px;
+}
+
+.body-container{
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 20px;
+  width: 83%;
+}

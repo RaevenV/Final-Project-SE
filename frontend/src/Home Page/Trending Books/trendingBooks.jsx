@@ -6,7 +6,7 @@ import trendingCover3 from '../../imageTrendingBooks/trendingCover3.png';
 
 function TrendingBooks() {
     return (
-        <div classname="trending-wrapper">
+        <div className="trending-wrapper">
             <h1 className="trendingBooks-text">Trending Books</h1>
         <div className="trending-cover-wrapper">
             <div className="cover-container">

@@ -1,7 +1,7 @@
-import news1 from '../../image-assets/newsbanner1.png'
-import news2 from '../../image-assets/newsbanner2.png'
-import news3 from '../../image-assets/newsbanner3.png'
-import news4 from '../../image-assets/newsbanner4.png'
+import news1 from '../../image-assets/news/newsbanner1.png'
+import news2 from '../../image-assets/news/newsbanner2.png'
+import news3 from '../../image-assets/news/newsbanner3.png'
+import news4 from '../../image-assets/news/newsbanner4.png'
 
 const images = [
   {

@@ -6,7 +6,8 @@ import "./App.css";
 import LibraryPage from "./Library Page/libraryPage";
 import LoginPage from "./Login Page/loginPage";
 import RegisterPage from "./Register Page/registerPage";
-
+import ProfilePage from "./Profile Page/profilePage"
+import EditProfilePage from "./Profile Page/Edit Profile Page/editProfilePage"
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/library" exact element={<LibraryPage />} />
           <Route path="/loginPage" exact element={<LoginPage/>} />
           <Route path="/registerPage" exact element={<RegisterPage/>} />
+          <Route path="/profile" exact element={<ProfilePage />} />
+          <Route path="/editProfile" exact element={<EditProfilePage />} />
         </Routes>
       </Router>
     </>

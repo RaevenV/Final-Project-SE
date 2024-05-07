@@ -1,0 +1,22 @@
+.payment-info-container{
+  margin-top: 40px;
+  width: 90%;
+}
+
+.payment-title-container{
+  font-size: 25px;
+  color: #0D5541;
+  font-weight: 600;
+}
+
+.payment-field{
+  width: 60%;
+  margin-top: 0px;
+}
+
+.edit-card-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 60%;
+}

@@ -29,7 +29,7 @@ function LoginPage(){
                         <div className="login-button-wrapper"><button className="login-button-click">Login</button></div>
                         <div className="alternative-authentication">or continue with</div>
                         <div className="google-button-wrapper">
-                            <button type="button" class="login-with-google-btn">Google</button>
+                            <button type="button" className="login-with-google-btn">Google</button>
                         </div>
                     </div>
                 </div>

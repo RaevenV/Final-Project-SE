@@ -1,0 +1,20 @@
+.email{
+  margin-bottom: 10px;
+}
+
+.label{
+  color: black;
+  font-size: 14px;
+  font-weight: 450;
+  width: 90%;
+}
+
+.field{
+  color: #929292;
+  font-size: 14px;
+  font-weight: 300;
+  width: 90%;
+  border-bottom: 1px solid #929292;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

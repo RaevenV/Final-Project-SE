@@ -1,0 +1,19 @@
+.fav-mentors-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mentor-profile-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mentor-name-container{
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 400;
+}

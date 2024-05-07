@@ -1,0 +1,30 @@
+.edit-button{
+  border: 1.5px solid #0D5541;
+  width: 100px;
+  border-radius: 8px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.button-link{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #0D5541;
+  margin: 2px;
+}
+
+.edit-button:hover{
+  border: 1.5px solid #ffa92c;
+  background-color: #ffa92c;
+  color: #F2F2F2;
+}
+
+.button-link:hover{
+  color: #F2F2F2;
+}

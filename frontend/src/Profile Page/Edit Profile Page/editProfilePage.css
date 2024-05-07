@@ -1,0 +1,34 @@
+.editing-box{
+  margin-top: 60px;
+  background-color: #F2F2F2;
+  width: 83%;
+  height: auto;
+  padding: 20px 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border-radius: 18px;
+  z-index: 0;
+  margin-top: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-bio-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 90%;
+}
+
+.save-button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 90%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}

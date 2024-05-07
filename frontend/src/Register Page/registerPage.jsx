@@ -27,7 +27,7 @@ function RegisterPage(){
                         <div className="register-button-wrapper"><button className="register-button-click">Login</button></div>
                         <div className="alternative-authentication">or continue with</div>
                         <div className="google-button-wrapper">
-                            <button type="button" class="register-with-google-btn">Google</button>
+                            <button type="button" className="register-with-google-btn">Google</button>
                         </div>
                     </div>
                 </div>
