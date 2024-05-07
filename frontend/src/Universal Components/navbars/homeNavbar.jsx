@@ -28,7 +28,7 @@ function HomeNavbar(props) {
               Forum
             </Link>
           </div>
-          <RegisterButton text="Login" link="/" />
+          <RegisterButton text="Login" link="LoginPage" />
         </div>
       </div>
     </>
