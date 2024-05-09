@@ -1,11 +1,30 @@
 import "./loginPage.css"
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import FormField from "../Form Field/formField"
 import LoginRegisterBtn from "../Button/loginRegisterBtn"
 import GoogleBtn from "../Button/googleBtn"
+import { signInWithEmailAndPassword } from "firebase/auth"
+import {auth} from "../../firebase"
 
 function LoginPage(){
+    const [error, setError] = useState(false)
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    const handleLogin = (e)=>{
+        e.preventDefault();
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
+            console.log(user)
+        })
+        .catch((error) => {
+            setError(true)
+        });
+    }
     return (
         <>
             <div className="login-page-container">
@@ -18,15 +37,29 @@ function LoginPage(){
                 <div className="login-section-container">
                     <div className="login-section-wrapper">
                         <h1 className="login-title">Login</h1>
-                        <FormField label="Email" placeholder="Input your email here"/>
-                        <FormField label="Password" placeholder="********"/>
-                        <div className="register-link">
-                            <label className="register-link-desc">Don't have any account?</label>
-                            <Link to="../RegisterPage" className="sign-up-link"> Sign Up</Link>
-                        </div>
-                        <LoginRegisterBtn props="Login"/>
-                        <div className="alternative-authentication">or continue with</div>
-                        <GoogleBtn/>
+                        <form onSubmit={handleLogin}>
+                            <FormField 
+                                label="Email" 
+                                type="email" 
+                                placeholder="Input your email here" 
+                                style={error ? { border: "1px solid red" } : {}}
+                                onChange={e=>setEmail(e.target.value)}
+                            />
+                            <FormField 
+                                label="Password" 
+                                type="password" 
+                                placeholder="********" 
+                                style={error ? { border: "1px solid red" } : {}}
+                                onChange={e=>setPassword(e.target.value)}
+                            />
+                            <div className="register-link">
+                                <label className="register-link-desc">Don't have any account?</label>
+                                <Link to="../RegisterPage" className="sign-up-link"> Sign Up</Link>
+                            </div>
+                            <LoginRegisterBtn props="Login"/>
+                            <div className="alternative-authentication">or continue with</div>
+                            <GoogleBtn/>
+                        </form>
                     </div>
                 </div>
             </div>

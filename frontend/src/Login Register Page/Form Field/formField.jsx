@@ -1,11 +1,11 @@
 import React from "react";
 import "./formField.css";
 
-function FormField({label, placeholder}) {
+function FormField({label, type, placeholder, style, onChange}) {
   return (
     <div className="input-box">
         <label className="field-label">{label}</label>
-        <input type="text" placeholder={placeholder} required/>
+        <input type={type} placeholder={placeholder} style={style} onChange={onChange}/>
     </div>
   );
 }
