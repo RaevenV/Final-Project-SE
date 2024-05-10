@@ -17,7 +17,7 @@ function RegisterPage(){
     const handleLogin = (e)=>{
         e.preventDefault();
 
-        createUserWithEmailAndPassword(auth, name, email, password)
+        createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
             console.log(user)
