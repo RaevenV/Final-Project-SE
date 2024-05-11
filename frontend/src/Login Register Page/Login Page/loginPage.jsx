@@ -5,7 +5,7 @@ import FormField from "../Form Field/formField"
 import LoginRegisterBtn from "../Button/loginRegisterBtn"
 import GoogleBtn from "../Button/googleBtn"
 import { signInWithEmailAndPassword } from "firebase/auth"
-import {auth} from "../../firebase"
+import { auth } from "../../firebase"
 
 function LoginPage(){
     const [error, setError] = useState(false)
