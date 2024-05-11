@@ -14,7 +14,7 @@ function HomeNavbar(props) {
           </Link>
           
           <div className="navbar-button">
-            <Link to="/" className="navbar-link">
+            <Link to="ModulesPage" className="navbar-link">
               Modules
             </Link>
           </div>

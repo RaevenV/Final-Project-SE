@@ -1,6 +1,7 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import RegisterButton from "../Login & Register Buttons/registerButton";
 
 function ModuleNavbar(props) {
   return (
@@ -26,7 +27,7 @@ function ModuleNavbar(props) {
               Forum
             </Link>
           </div>
-          <RegisterButton text="Login" link="/" />
+          <RegisterButton text="Login" link="../LoginPage" />
         </div>
       </div>
     </>

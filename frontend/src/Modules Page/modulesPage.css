@@ -1,0 +1,16 @@
+body {
+  background-color: #e3e3e3;
+}
+
+.modulepage-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 72px;
+}
+
+.testbox {
+  height: 200px;
+}

@@ -8,6 +8,7 @@ import LoginPage from "./Login Register Page/Login Page/loginPage";
 import RegisterPage from "./Login Register Page/Register Page/registerPage";
 import ProfilePage from "./Profile Page/profilePage"
 import EditProfilePage from "./Profile Page/Edit Profile Page/editProfilePage"
+import ModulesPage from "./Modules Page/modulesPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/registerPage" exact element={<RegisterPage/>} />
           <Route path="/profile" exact element={<ProfilePage />} />
           <Route path="/editProfile" exact element={<EditProfilePage />} />
+          <Route path="/modulesPage" exact element={<ModulesPage />} />
         </Routes>
       </Router>
     </>
