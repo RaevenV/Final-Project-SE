@@ -6,3 +6,8 @@
   min-height: 100vh;
   margin-top: 112px;
 }
+
+.libraryBook-container{
+  display: flex;
+}
+

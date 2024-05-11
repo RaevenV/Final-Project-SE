@@ -1,0 +1,21 @@
+.book-template-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+}
+
+.bookTemp1 {
+    max-width: 100%;
+    height: auto; 
+}
+
+#rating-star-template {
+    width: 150px;
+    height: 30px;
+}
+
+.bookTempTitle {
+    font-size: 20px;
+    text-align: center;
+}

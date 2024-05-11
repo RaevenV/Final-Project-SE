@@ -1,0 +1,84 @@
+.bookView-container{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 120px;
+    margin-bottom: 150px;
+}
+
+.bookDetails-container{
+   margin-left: 75px;
+}
+
+.bookDetails-miniContainer{
+    width: 350px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.bookViewTitle{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.bookViewAuthor{
+    color: #136E54;
+    margin-top: 2px;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.bookStars{
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.bookRating{
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.bookPages{
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.dividerLineTop{
+    border-top: 3px solid black;
+    margin-bottom: 20px;
+}
+
+.dividerLineBottom{
+    border-top: 3px solid black;
+    margin-top: 225px;
+}
+.author-wrapper{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#rating-star{
+    width: 70px;
+    height: 12px;
+    margin-top: 2px;
+}
+
+.ratingContainer{
+    display: flex;
+}
+
+.rating-star-container{
+    display: flex;
+}
+
+.ratingText{
+    font-size: 15px;
+}
+
+.pagesContainer{
+    display: flex;
+}
+
+.pagesText{
+    font-size: 15px;
+}
