@@ -40,6 +40,14 @@
     margin-left: -30px;
 }
 
+.dropdown-menu>li:active{
+    background-color: var(--lightGray);
+}
+
+.dropdown-menu>li:active{
+    background-color: var(--lightGray);
+}
+
 .dropdown{
     display: flex;
     justify-content: center;
@@ -50,6 +58,7 @@
 
 .dropdown-menu{
     width: 100%;
+    z-index: 0;
 }
 
 .btn-secondary{
@@ -78,4 +87,17 @@
 
 .btn-secondary:active {
   background-color: var(--lightGray);
+}
+
+@media (max-width: 767px) {
+  .btn-secondary{
+    font-size: 12px !important;
+    padding-left: -4px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn-secondary{
+    font-size: 16px;
+  }
 }

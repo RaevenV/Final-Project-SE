@@ -1,37 +1,49 @@
 import React from "react";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./navbar.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import RegisterButton from "../Login & Register Buttons/registerButton";
-
 
 function HomeNavbar(props) {
   return (
-    <>
-      <div className="navbar-wrapper">
-        <div className="navbar-container">
-          <Link to="/" className="navlogo-link">
-            <img className="navlogo-img" src="/logo-clear.png" alt="" />
-          </Link>
-          
-          <div className="navbar-button">
-            <Link to="ModulesPage" className="navbar-link">
-              Modules
-            </Link>
-          </div>
-          <div className="navbar-button1">
-            <Link to="/" className="navbar-link">
-              Library
-            </Link>
-          </div>
-          <div className="navbar-button">
-            <Link to="/" className="navbar-link">
-              Forum
-            </Link>
-          </div>
-          <RegisterButton text="Login" link="LoginPage" />
+    <nav className="navbar fixed-top navbar-expand-lg">
+      <div className="container-fluid mb-2">
+        <Link to="/" href="#">
+          <img src="./logo-clear.png" className="navlogo-img" alt="" />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarText">
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li className="nav-item left">
+              <Link to="/" className="nav-link">
+                modules
+              </Link>
+            </li>
+            <li className="nav-item middle">
+              <Link to="/" className="nav-link">
+                library
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                forum
+              </Link>
+            </li>
+          </ul>
+          <RegisterButton text="login" link='/'/>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
 

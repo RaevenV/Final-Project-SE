@@ -1,7 +1,8 @@
 import EnrollButton from "../Enroll Button/enrollButton"
+import "../../../node_modules/bootstrap/dist/css/bootstrap.css"
 import "./moduleCart.css"
 
-function moduleCart (props){
+function ModuleCart (props){
     return(
         <>
         <div className="module-cart-container">
@@ -21,4 +22,4 @@ function moduleCart (props){
     )
 }
 
-export default moduleCart
+export default ModuleCart

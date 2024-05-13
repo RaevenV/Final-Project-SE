@@ -9,8 +9,8 @@
   border-radius: 16px;
 }
 
-.login-button-link{
-    font-family: "Poppins", sans-serif;
+.login-button-link {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
@@ -19,4 +19,34 @@
 
 .login-button-link:hover {
   color: #f2f2f2;
+}
+
+@media (max-width: 767px) {
+  .login-button {
+    background-color: var(--white);
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .login-button-link:hover {
+    color: var(--orange);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
+}
+
+@media (max-width: 991px) {
+  .login-button {
+    background-color: var(--white);
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .login-button-link:hover {
+    color: var(--orange);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
 }
