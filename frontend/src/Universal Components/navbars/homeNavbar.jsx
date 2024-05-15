@@ -25,7 +25,7 @@ function HomeNavbar(props) {
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item left">
-              <Link to="/" className="nav-link">
+              <Link to="/ModulesPage" className="nav-link">
                 modules
               </Link>
             </li>
