@@ -24,3 +24,11 @@
   font-weight: 300;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .module-desc-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+}

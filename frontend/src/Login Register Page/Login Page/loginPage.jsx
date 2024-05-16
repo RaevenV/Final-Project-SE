@@ -6,20 +6,22 @@ import LoginRegisterBtn from "../Button/loginRegisterBtn"
 import GoogleBtn from "../Button/googleBtn"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from "../../firebase"
+import { useNavigate } from "react-router-dom";
 
 function LoginPage(){
     const [error, setError] = useState(false)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
 
     const handleLogin = (e)=>{
         e.preventDefault();
 
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Signed up 
             const user = userCredential.user;
             console.log(user)
+            navigate("/");
         })
         .catch((error) => {
             setError(true)
@@ -56,7 +58,7 @@ function LoginPage(){
                                 <label className="register-link-desc">Don't have any account?</label>
                                 <Link to="../RegisterPage" className="sign-up-link"> Sign Up</Link>
                             </div>
-                            <LoginRegisterBtn props="Login"/>
+                            <LoginRegisterBtn buttonLbl="Login" onClick={handleLogin}/>
                             <div className="alternative-authentication">or continue with</div>
                             <GoogleBtn/>
                         </form>

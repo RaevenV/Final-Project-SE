@@ -22,7 +22,7 @@ function App() {
           <Route path="/registerPage" exact element={<RegisterPage/>} />
           <Route path="/profile" exact element={<ProfilePage />} />
           <Route path="/editProfile" exact element={<EditProfilePage />} />
-          <Route path="/ModulesPage" exact element={<ModulesPage />} />
+          <Route path="/modulesPage" exact element={<ModulesPage />} />
           <Route path="/modulePreview" exact element={<ModulePreview />} />
         </Routes>
       </Router>

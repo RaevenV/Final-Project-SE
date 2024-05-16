@@ -25,7 +25,7 @@ function HomeNavbar(props) {
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item left">
-              <Link to="/ModulesPage" className="nav-link">
+              <Link to="/modulesPage" className="nav-link">
                 modules
               </Link>
             </li>
@@ -40,7 +40,7 @@ function HomeNavbar(props) {
               </Link>
             </li>
           </ul>
-          <RegisterButton text="login" link='/'/>
+          <RegisterButton text="login" link='/loginPage'/>
         </div>
       </div>
     </nav>

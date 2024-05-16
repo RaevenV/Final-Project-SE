@@ -6,28 +6,30 @@ import LoginRegisterBtn from "../Button/loginRegisterBtn";
 import GoogleBtn from "../Button/googleBtn";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
 
 function RegisterPage() {
   const [error, setError] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Validation checks before calling createUserWithEmailAndPassword
     if (validateName(name) && validateEmail(email) && validatePassword(password)) {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
           console.log(user);
+          navigate("/");
         })
         .catch((error) => {
           setError(true);
         });
     } else {
-      setError(true); // Set error if validation fails
+      setError(true); 
     }
   };
 
@@ -88,11 +90,9 @@ function RegisterPage() {
                 <label className="register-link-desc">
                   Already have an account?
                 </label>
-                <Link to="../LoginPage" className="sign-up-link">
-                  Login
-                </Link>
+                <Link to="../LoginPage" className="sign-up-link"> Login</Link>
               </div>
-              <LoginRegisterBtn props="Sign Up" />
+              <LoginRegisterBtn buttonLbl="Sign Up" onClick={handleLogin}/>
               <div className="alternative-authentication">or continue with</div>
               <GoogleBtn />
             </form>
