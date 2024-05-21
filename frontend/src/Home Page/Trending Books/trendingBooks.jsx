@@ -10,7 +10,6 @@ function TrendingBooks() {
       <div className="trending-wrapper">
         <h1 className="trendingBooks-text">Trending Books</h1>
         <div className="trending-cover-wrapper">
-          <div className="cover-container">
             <BookCart
               img={trendingCover1}
               title="Financial Basics for Business"
@@ -26,8 +25,6 @@ function TrendingBooks() {
               title="Easy Manage Stocks"
               className="trendingCover3"
             />
-            
-          </div>
         </div>
       </div>
     );

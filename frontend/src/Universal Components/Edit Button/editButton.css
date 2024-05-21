@@ -1,13 +1,13 @@
 .edit-button{
   border: 1.5px solid #0D5541;
   width: 100px;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .button-link{

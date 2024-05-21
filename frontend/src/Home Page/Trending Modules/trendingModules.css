@@ -2,7 +2,7 @@
     width: 83%;
     height: 510px;
     margin-top: 80px;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
     z-index: 0;
 }
 
@@ -29,4 +29,47 @@
 .trending-modules-2{
     margin-left: 20px;
     margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+    .trending-modules-container{
+        height: auto;
+        padding: 0 30px;
+    }
+   .trending-modules-wrapper{
+    flex-direction: column;
+   }
+
+   .trending-modules-2,.trending-modules-1,.trending-modules-3{
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .trending-modules-title{
+        font-size: 28px;
+    }
+
+    .trending-modules-description{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 961px) {
+    .trending-modules-wrapper{
+    flex-direction: column;
+   }
+
+   .trending-modules-container{
+        height: auto;
+        padding: 0 30px;
+    }
+
+   .trending-modules-2,.trending-modules-1,.trending-modules-3{
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
 }

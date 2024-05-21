@@ -57,11 +57,17 @@
     .module-cart-container{
         transform: scale(0.98);
     }
+    .module-cart-container{
+        transform: scale(0.98);
+    }
 }
 
 @media (max-width: 961px) {
     #result-wrapper{
       padding-left: 0;
+    }
+    .module-cart-container{
+        transform: scale(0.98);
     }
 }
 

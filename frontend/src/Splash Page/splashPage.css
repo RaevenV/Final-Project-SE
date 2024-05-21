@@ -1,0 +1,262 @@
+.hero-container {
+  background: url("/city-img.jpg") center center/cover no-repeat;
+  width: 100%;
+  height: 38rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 9%;
+  border-radius: 0 0 16px 16px;
+}
+
+.hero-text-container {
+  height: 53%;
+  width: 50%;
+  margin-bottom: 120px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.hero-title {
+  color: var(--white);
+  font-size: 36px;
+  font-weight: 600;
+  height: 12%;
+  text-wrap: nowrap;
+}
+
+.hero-content {
+  height: 30%;
+  color: var(--lightGray);
+}
+
+.splashpage-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+.btn {
+  width: 20%;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
+}
+
+#about-container {
+  margin-bottom: 100px;
+  width: 100%;
+  height: 28rem;
+  padding: 0 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#about-wrapper {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-section {
+  width: 100%;
+  height: 25%;
+  padding: 0 5% 2% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--lightGreen);
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 82%;
+  padding: 0 5%;
+  line-height: 215%;
+  text-align: justify;
+}
+
+#img-container {
+  width: 45%;
+  height: 85%;
+  position: relative;
+}
+
+.about-img1 {
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  bottom: 0;
+  right: 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: 0px 1px 1.5px 0px rgba(0, 0, 0, 0.61);
+}
+
+.about-img2 {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.61);
+  z-index: -2;
+}
+
+#review-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+#review-title{
+  font-weight: 700;
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--lightGreen);
+  margin-bottom: 8px;
+}
+
+#review-desc{
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: var(--black);
+  font-weight: 400;
+}
+
+@media (max-width: 1190px){
+  .bottom-section {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 961px) {
+  .about-img1{
+    width: 60%;
+    height: 70%;
+  }
+
+  .about-img2{
+    width: 60%;
+    height: 70%;
+  }
+
+  #about-wrapper {
+    width: 80%;
+    height: 50%;
+    margin-top: 50px;
+  }
+
+  #img-container {
+    width: 75%;
+    height: 100%;
+  }
+  #about-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin-bottom: 100px;
+  }
+
+  .top-section{
+    justify-content: center;
+  }
+
+  .bottom-section {
+    font-size: 14px;
+  }
+  .hero-text-container {
+    width: 60%;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .btn {
+    width: 40%;
+  }
+
+  .hero-content {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  #review-text{
+    padding: 0 9%;
+  }
+
+  #review-desc{
+    text-align: center;
+  }
+
+  .about-img1{
+    width: 60%;
+    height: 70%;
+  }
+
+  .about-img2{
+    width: 60%;
+    height: 70%;
+  }
+
+  #about-wrapper {
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  #img-container {
+    width: 75%;
+    height: 100%;
+  }
+
+  #about-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .bottom-section {
+    font-size: 12px;
+  }
+  .hero-text-container {
+    width: 60%;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+  .btn {
+    width: 40%;
+  }
+
+  .hero-content {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+}

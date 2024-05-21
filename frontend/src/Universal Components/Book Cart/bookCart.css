@@ -1,43 +1,81 @@
-.trendingBooks-text{
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    text-align: center;
+.trendingBooks-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
 }
 
-.trending-cover-wrapper{
-    display: flex;
-    justify-content: center;
-}
-
-.cover-container{
-    display: flex; 
-    width: 1100px;
-    height: 400px;
-    margin-bottom: 200px;
-    justify-content: center;
-    border-radius: 16px;
-    flex-wrap: nowrap;
-    align-items: center;
+.trending-cover-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 75%;
 }
 
 .trendingCover1,
 .trendingCover2,
-.trendingCover3{
-    width: 30%; 
-    height: 100%; 
-}
-
-.trendingCover2{
-   margin-left: 40px;
-   margin-right: 40px;
+.trendingCover3 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .bookTitle1,
 .bookTitle2,
-.bookTitle3{
-    margin-top: 20px;
+.bookTitle3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 961px) {
+  .trending-cover-wrapper {
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+
+  .trendingCover1,
+  .trendingCover2,
+  .trendingCover3 {
+    width: 32%;
+  }
+
+  .trendingCover1 > img,
+  .trendingCover2 > img,
+  .trendingCover3 > img{
+    height: 350px;
+    width: 100%;
+  }
+
+  .bookTitle1 {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
+    height: 80px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .trending-cover-wrapper {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .trendingCover1,
+  .trendingCover2,
+  .trendingCover3 {
+    width: 55%;
+  }
+
+  .trendingCover1 > img,
+  .trendingCover2 > img,
+  .trendingCover3 > img{
+    height: 400px;
+    width: 100%;
+  }
 }

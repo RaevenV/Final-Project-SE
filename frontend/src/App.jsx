@@ -10,20 +10,22 @@ import ProfilePage from "./Profile Page/profilePage"
 import EditProfilePage from "./Profile Page/Edit Profile Page/editProfilePage"
 import ModulesPage from "./Modules Page/modulesPage";
 import ModulePreview from "./Modules Page/Module Preview Page/modulePreview";
+import SplashPage from "./Splash Page/splashPage";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" exact element={<HomePage />} />
-          <Route path="/library" exact element={<LibraryPage />} />
+          <Route path="/home" exact element={<HomePage />} />
+          <Route path="/libraryPage" exact element={<LibraryPage />} />
           <Route path="/loginPage" exact element={<LoginPage/>} />
           <Route path="/registerPage" exact element={<RegisterPage/>} />
           <Route path="/profile" exact element={<ProfilePage />} />
           <Route path="/editProfile" exact element={<EditProfilePage />} />
           <Route path="/modulesPage" exact element={<ModulesPage />} />
           <Route path="/modulePreview" exact element={<ModulePreview />} />
+          <Route path="/" exact element = {<SplashPage/>}/>
         </Routes>
       </Router>
     </>

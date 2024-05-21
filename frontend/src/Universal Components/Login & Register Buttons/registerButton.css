@@ -6,7 +6,7 @@
   align-items: center;
   margin-left: 12px;
   height: 40px;
-  border-radius: 16px;
+  border-radius: 12px;
 }
 
 .login-button-link {
@@ -31,8 +31,7 @@
 
   .login-button-link:hover {
     color: var(--orange);
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
 }
 
