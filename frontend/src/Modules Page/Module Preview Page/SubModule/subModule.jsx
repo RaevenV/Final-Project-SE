@@ -1,11 +1,63 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./subModule.css";
 import SubModuleItem from "./subModuleItem";
+import { db } from "../../../firebase";
+import { collection, getDocs, doc } from "firebase/firestore";
 
 function SubModule() {
+  const [subModules, setSubModules] = useState([]);
+
+  useEffect(() => {
+    const fetchSubModules = async () => {
+      try {
+        const moduleQuerySnapshot = await getDocs(collection(db, "module"));
+        const allModules = [];
+        const allSubModules = [];
+
+        for (const moduleDoc of moduleQuerySnapshot.docs) {
+          const submoduleCollectionRef = collection(db, `module/${moduleDoc.id}/submodule`);
+          const submoduleQuerySnapshot = await getDocs(submoduleCollectionRef);
+
+          // submoduleQuerySnapshot.forEach((doc) => {
+          //   const subModulesData = doc.data();
+          //   allSubModules.push(...subModulesData);
+          // })
+          const subModulesData = submoduleQuerySnapshot.docs.map((doc) => doc.data());
+          allSubModules.push(...subModulesData);
+
+          const modulesData = moduleQuerySnapshot.docs.map((moduleDoc)=>moduleDoc.data());
+          allModules.push(...modulesData)
+        }
+
+        setSubModules(allSubModules);
+      } catch (error) {
+        console.error("Error fetching submodules: ", error);
+      }
+    };
+
+    fetchSubModules();
+  }, []);
+
   return (
     <>
       <div className="accordion" id="accordionExample">
+        {/* {subModules.map((subModule, index) => (
+          <SubModuleItem
+            key={index}
+            headingID={subModule.headingID}
+            collapseID={subModule.collapseID}
+            target={subModule.target}
+            submoduleTitle={subModule.title}
+            videoId={subModule.videoId}
+            videoUrl={subModule.videoUrl}
+            chapterTitle1={subModule.chapterTitle1}
+            chapterDesc1={subModule.chapterDesc1}
+            chapterTitle2={subModule.chapterTitle2}
+            chapterDesc2={subModule.chapterDesc2}
+            chapterTitle3={subModule.chapterTitle3}
+            chapterDesc3={subModule.chapterDesc3}
+          />
+        ))} */}
         <SubModuleItem 
           headingID="headingOne" collapseID="collapseOne" target="#collapseOne"
           submoduleTitle="1. Introduction to Investing" videoId="8Ij7A1VCB7I" videoUrl="https://www.youtube.com/watch?v=8Ij7A1VCB7I"
@@ -36,8 +88,6 @@ function SubModule() {
           chapterTitle3="3.3 Key Terms"
           chapterDesc3="Navigate the complex language of investing by acquiring a solid understanding of key terms and jargon. From bull markets to dividends, participants will become familiar with the terminology commonly used in financial discussions. This foundation is essential for effective communication and comprehension within the investment community."
         />
-        
-
       </div>
     </>
   );

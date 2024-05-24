@@ -6,11 +6,11 @@ function SubModuleItem(props) {
     <>
       <div className="accordion-item">
           <div className="accordion-header" id={props.headingID}>
-            <button className="accordion-button header-text" type="button" data-bs-toggle="collapse" data-bs-target={props.target} aria-expanded="true" aria-controls={props.collapseID} style={{fontSize:'20px'}}>
+            <button className="accordion-button header-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target={props.target} aria-expanded="true" aria-controls={props.collapseID} style={{fontSize:'20px'}}>
               <strong className="bold-strong">{props.submoduleTitle}</strong>
             </button>
           </div>
-          <div id={props.collapseID} className="accordion-collapse collapse show" aria-labelledby={props.headingID} data-bs-parent="#accordionExample">
+          <div id={props.collapseID} className="accordion-collapse collapse" aria-labelledby={props.headingID} data-bs-parent="#accordionExample">
             <div className="accordion-body">
               <div className="submodule">
                 <div className="submodule-section">

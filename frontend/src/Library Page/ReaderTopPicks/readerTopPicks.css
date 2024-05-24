@@ -1,0 +1,11 @@
+.top-picks-title{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.top-picks-books{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60%;
+  margin-top: 20px;
+}

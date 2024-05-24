@@ -182,6 +182,7 @@ function ModuleSearchbar() {
                 img={module.moduleImg}
                 title={module.moduleTitle}
                 description={module.moduleDescription}
+                link={`/modulePreview/${module.moduleTitle}`}
               />
             </div>
           ))}

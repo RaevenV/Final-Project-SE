@@ -24,7 +24,7 @@ function FeaturedModulesCard(props) {
                         </div>
                     </div>
                     <div className='featuredmodules-enroll-button'>
-                        <EnrollButton text="Enroll" link="/modulePreview"/>
+                        <EnrollButton text="Enroll" link={props.link}/>
                     </div>
                 </div>
             </div>

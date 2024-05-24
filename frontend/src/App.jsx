@@ -26,7 +26,7 @@ function App() {
           <Route path="/profile" exact element={<ProfilePage />} />
           <Route path="/editProfile" exact element={<EditProfilePage />} />
           <Route path="/modulesPage" exact element={<ModulesPage />} />
-          <Route path="/modulePreview" exact element={<ModulePreview />} />
+          <Route path="/modulePreview/:searchID" exact element={<ModulePreview />} />
           <Route path="/" exact element = {<SplashPage/>}/>
           <Route path="/forumPage" exact element={<ForumPage />} />
           <Route path="/forumPreview/:searchParam" exact element={<ForumPreviewPage />} />
