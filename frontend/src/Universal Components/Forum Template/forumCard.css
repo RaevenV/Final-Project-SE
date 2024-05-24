@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 250px;
+    height: 232px;
     width: 360px;
 }
 
@@ -57,16 +57,16 @@
 .button-box-green {
     background-color: #136e54;
     border-radius: 8px;
-    color: white;
-    height: 40%;
+    height: 26px;
+    width: 105px;
     padding: 12px 20px;
     display: flex;
-    align-items: center; 
-}
-
-.btn-text {
-    font-size: 12px;
-    margin: 0; 
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #F2F2F2;
 }
 
 @media (max-width: 991px) {

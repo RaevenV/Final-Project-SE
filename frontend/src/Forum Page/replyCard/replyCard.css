@@ -1,0 +1,52 @@
+.reply-postcard-container{
+    display: flex;
+    justify-content: center;
+}
+
+.reply-postcard-wrapper{
+    padding-top: 12px;
+    padding-left: 12px;
+    width: 1118px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    padding-left: 72px;
+}
+
+.reply-postcard-information{
+    background-color: var(--lightGray);
+    display: flex;
+    border-radius: 10px;
+    width: 95%;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+.reply-postcard-profile{
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.reply-postcard-forum-profile{
+    width: 50px;
+}
+
+.reply-postcard-detail-container{
+    margin-top: 16px;
+    width: 88%;
+    margin-bottom: 16px;
+}
+
+.reply-postcard-username{
+    font-size: 20px; 
+    font-weight: 500;
+}
+
+.reply-postcard-time{
+    margin-top: 4px;
+    margin-bottom: 8px;
+    color: var(--darkGray);
+    font-size: 16px;
+    font-weight: 500;
+}

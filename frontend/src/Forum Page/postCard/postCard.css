@@ -1,0 +1,89 @@
+.postcard-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.postcard-wrapper{
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-bottom: 20px;
+    width: 1118px;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postcard-title{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.postcard-information{
+    display: flex;
+}
+
+.postcard-profile{
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.postcard-forum-profile{
+    width: 50px;
+}
+
+.postcard-detail-container{
+    margin-top: 16px;
+    width: 85%;
+}
+
+.postcard-username{
+    font-size: 20px; 
+    font-weight: 500;
+}
+
+.postcard-time{
+    margin-top: 4px;
+    margin-bottom: 8px;
+    color: var(--darkGray);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.postcard-interaction{
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.postcard-reply{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.interactionButton{
+    border: none;
+}
+
+.reply-box{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.replyinputbox{
+    width: 95%;
+}
+
+.submitReply-button{
+    border: none;
+}
+
+.send-icon-button{
+    width: 32px;
+    margin-top: 4px;
+    margin-left: 12px;
+}

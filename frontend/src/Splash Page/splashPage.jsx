@@ -21,7 +21,7 @@ function SplashPage() {
               Strategies, Insights, and Tools to Build Wealth, Enhance Your
               Skills, and Live a Life of Financial Freedom.
             </div>
-            <button type="button" class="btn btn-outline-light">
+            <button type="button" className="btn btn-outline-light">
               Explore
             </button>
           </div>

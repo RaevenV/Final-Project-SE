@@ -1,0 +1,10 @@
+.forumpreview-container{
+    margin-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.forumpreview-title{
+    width: 1118px;
+}

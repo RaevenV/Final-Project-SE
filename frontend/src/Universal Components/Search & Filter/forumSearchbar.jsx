@@ -5,7 +5,9 @@ import "./moduleSearchbar.css";
 import "./forumSearchBar.css";
 import { db } from "../../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import ForumCard from "../Forum Template/forumCard";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../Forum Template/forumCard.css";
 
 function ForumSearchbar() {
   const [input, setInput] = useState("");
@@ -20,24 +22,30 @@ function ForumSearchbar() {
     setFilter(selectedFilter);
   };
 
-  let findQuery = "";
+  const navigate = useNavigate();
+
+  const handleClick = (title) => {
+    navigate(`/forumPreview/${title}`);
+  };
 
   useEffect(() => {
     const findData = async () => {
+      let findQuery = "";
+
       if (input === "" && filter === "") {
         findQuery = query(collection(db, "forum"));
-      } else if (input != "" && filter === "") {
+      } else if (input !== "" && filter === "") {
         findQuery = query(
           collection(db, "forum"),
           where("forumTitle", ">=", input),
           where("forumTitle", "<=", input + "\uf8ff")
         );
-      } else if (input === "" && filter != "") {
+      } else if (input === "" && filter !== "") {
         findQuery = query(
           collection(db, "forum"),
           where("forumCategory", "==", filter)
         );
-      } else if (input != "" && filter != "") {
+      } else if (input !== "" && filter !== "") {
         findQuery = query(
           collection(db, "forum"),
           where("forumTitle", ">=", input),
@@ -119,7 +127,6 @@ function ForumSearchbar() {
             className="searchBar-input"
             onChange={(e) => handleChange(e.target.value)}
           />
-
           <img src="./search.png" alt="" className="search-icon" />
         </div>
 
@@ -195,11 +202,23 @@ function ForumSearchbar() {
         <div id="result-wrapper-forum">
           {result.map((forum, index) => (
             <div className="forum-cart-wrapper" key={index}>
-              <ForumCard
-                img={forum.img}
-                title={forum.title}
-                people={forum.member}
-              />
+              <div className="forumCard-container">
+                <img src={forum.img} alt="" className="forumCover" />
+                <div className="whiteBox">
+                  <div className="bookTempTitle">{forum.title}</div>
+                  <div className="people-button-container">
+                    <img src="./peopleIcon.png" alt="" className="peopleIcon" />
+                    <h1 className="peopleTotal">{forum.people}</h1>
+                    <h1 className="peopleText">People</h1>
+                    <button
+                      className="button-box-green"
+                      onClick={() => handleClick(forum.title)}
+                    >
+                      join
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
