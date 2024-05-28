@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import { db } from "../../firebase";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, where, getDocs, addDoc, Timestamp } from "firebase/firestore";
 import HomeNavbar from '../../Universal Components/navbars/homeNavbar';
 import Footer from '../../Universal Components/footer';
 import ReplyCard from '../replyCard/replyCard';
@@ -10,12 +9,15 @@ import "./forumPreviewPage.css";
 import "../postCard/postCard.css";
 
 function ForumPreviewPage() {
-  
   const [showTextBox, setShowTextBox] = useState(false);
-  const replyButtonClick = () => {
-      setShowTextBox(!showTextBox);
+  const [replyInput, setReplyInput] = useState(""); // New state for reply input
+  const [selectedPostId, setSelectedPostId] = useState(null); // State to track selected post for reply
+
+  const replyButtonClick = (postId) => {
+    setShowTextBox(!showTextBox);
+    setSelectedPostId(postId); // Set the selected post ID for the reply
   }
-  
+
   const { searchParam } = useParams();
   const [result, setResult] = useState([]);
 
@@ -55,7 +57,7 @@ function ForumPreviewPage() {
 
               forumReplies.push({
                 content: reply.replyContent,
-                createdAt: reply.replyCreatedAt,
+                createdAt: reply.replyCreatedAt instanceof Timestamp ? reply.replyCreatedAt.toDate().toLocaleString() : reply.replyCreatedAt,
                 likeCount: reply.replyLikeCount,
                 sender: reply.replySender,
                 uid: reply.replyUid,
@@ -63,7 +65,8 @@ function ForumPreviewPage() {
             }
 
             forumPosts.push({
-              createdAt: post.createdAt,
+              id: forumPostDoc.id, // Include the post ID
+              createdAt: post.createdAt instanceof Timestamp ? post.createdAt.toDate().toLocaleString() : post.createdAt,
               likeCount: post.likeCount,
               postContent: post.postContent,
               sender: post.sender,
@@ -92,6 +95,66 @@ function ForumPreviewPage() {
     findData();
   }, [searchParam]);
 
+  // Step 2: Handle Reply Submission
+  const handleReplySubmit = async () => {
+    if (replyInput.trim() === "" || !selectedPostId) return; // Prevent empty replies
+
+    const newReply = {
+      replyContent: replyInput,
+      replyCreatedAt: Timestamp.fromDate(new Date()),
+      replyLikeCount: 0,
+      replySender: "Your Username",  // Replace with actual username logic
+      replyUid: "User UID"  // Replace with actual user UID logic
+    };
+
+    try {
+      await addDoc(collection(db, `forum/forum1/forumPost/${selectedPostId}/replies`), newReply);
+      setReplyInput("");  // Clear input field after submission
+      setShowTextBox(false);  // Hide the text box after submission
+      // Optionally, refresh the posts or add the new reply to the state to show it immediately
+      // Fetch the updated post data to reflect the new reply
+      updateReplies(selectedPostId);
+    } catch (error) {
+      console.error("Error adding reply:", error);
+    }
+  };
+
+  // Function to update replies for a specific post
+  const updateReplies = async (postId) => {
+    try {
+      const postRef = collection(db, `forum/forum1/forumPost/${postId}/replies`);
+      const postReplies = await getDocs(postRef);
+
+      let forumReplies = [];
+
+      for (const forumReplyDoc of postReplies.docs) {
+        const reply = forumReplyDoc.data();
+
+        forumReplies.push({
+          content: reply.replyContent,
+          createdAt: reply.replyCreatedAt instanceof Timestamp ? reply.replyCreatedAt.toDate().toLocaleString() : reply.replyCreatedAt,
+          likeCount: reply.replyLikeCount,
+          sender: reply.replySender,
+          uid: reply.replyUid,
+        });
+      }
+
+      // Update the state with the new replies
+      setResult(prevResult =>
+        prevResult.map(forum => ({
+          ...forum,
+          posts: forum.posts.map(post =>
+            post.id === postId
+              ? { ...post, replies: forumReplies }
+              : post
+          )
+        }))
+      );
+    } catch (error) {
+      console.error("Error updating replies:", error);
+    }
+  };
+
   return (
     <>
       <HomeNavbar />
@@ -112,15 +175,25 @@ function ForumPreviewPage() {
                       <div className="postcard-thread">{post.postContent}</div>
                       <div className="postcard-interaction">
                         <button className='interactionButton'><img src="/like.png" alt="" className='postcard-like'/></button>
-                        <button onClick={replyButtonClick} className='interactionButton'>
+                        <button onClick={() => replyButtonClick(post.id)} className='interactionButton'>
                           <img src="/reply.png" alt="" className='postcard-reply'/>
                         </button>
                         <button className='interactionButton'><img src="/more.png" alt="" className='postcard-more'/></button>
                       </div>
-                      {showTextBox && (
+                      {showTextBox && selectedPostId === post.id && (
                         <div className="reply-box">
-                          <input type="text" placeholder='Reply here...' className='replyinputbox'/>
-                          <button className='submitReply-button' type='submit'>
+                          <input 
+                            type="text" 
+                            placeholder='Reply here...' 
+                            className='replyinputbox' 
+                            value={replyInput}
+                            onChange={(e) => setReplyInput(e.target.value)}
+                          />
+                          <button 
+                            className='submitReply-button' 
+                            type='submit'
+                            onClick={handleReplySubmit}
+                          >
                             <img src="/send-icon.png" alt="" className='send-icon-button'/>
                           </button>
                         </div>
@@ -145,7 +218,7 @@ function ForumPreviewPage() {
       </div>
       <Footer />
     </>
-  )
+  );
 }
 
 export default ForumPreviewPage;
