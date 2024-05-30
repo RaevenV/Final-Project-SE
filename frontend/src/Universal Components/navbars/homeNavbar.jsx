@@ -8,7 +8,7 @@ function HomeNavbar(props) {
   return (
     <nav className="navbar fixed-top navbar-expand-lg">
       <div className="container-fluid mb-2">
-        <Link to="/home" href="#">
+        <Link to="/homePage" href="#">
           <img src="/logo-clear.png" className="navlogo-img" alt="" />
         </Link>
         <button
@@ -35,12 +35,14 @@ function HomeNavbar(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/forumPage" className="nav-link">
                 forum
               </Link>
             </li>
           </ul>
-          <RegisterButton text="login" link='/loginPage'/>
+          <Link to="/profile">
+            <img src="/profileLogo.png" className="profile-logo" />
+          </Link>
         </div>
       </div>
     </nav>

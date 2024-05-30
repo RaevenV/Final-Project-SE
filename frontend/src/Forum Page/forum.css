@@ -1,0 +1,9 @@
+.trendingForumCard-wrapper{
+  width: 83%;
+  height: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}

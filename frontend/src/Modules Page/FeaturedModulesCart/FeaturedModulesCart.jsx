@@ -18,7 +18,7 @@ function FeaturedModulesCart() {
           imgMentor="./mentor1.png" 
           mentorName="Giselle Sharon" 
           mentorPosition="Chief Executive of DOOIT"
-          link="/modulePreview/InvestingFundamentals"
+          link="/modulePreview/Investing%20Fundamentals"
         />
     </>
   )

@@ -210,12 +210,14 @@ function ForumSearchbar() {
                     <img src="./peopleIcon.png" alt="" className="peopleIcon" />
                     <h1 className="peopleTotal">{forum.people}</h1>
                     <h1 className="peopleText">People</h1>
-                    <button
-                      className="button-box-green"
-                      onClick={() => handleClick(forum.title)}
-                    >
-                      join
-                    </button>
+                    <div className="featuredmodules-enroll-button">
+                      <button
+                        className="button-box-green"
+                        onClick={() => handleClick(forum.title)}
+                      >
+                        join
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -89,8 +89,8 @@
 }
 
 .navbar{
-    padding-top: 14px;
-  }
+  padding-top: 14px;
+}
 
 @media (max-width: 767px) {
   .navbar{

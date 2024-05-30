@@ -1,21 +1,22 @@
 .enroll-button {
-    background-color: #136E54;
-    width: 118px;
-    height: 35.7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-  }
-  
-  .enroll-button-link{
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    text-decoration: none;
-    color: #F2F2F2;
-  }
-  
-  .enroll-button-link:hover {
-    opacity: 80%;
-  }
+  background-color: #136E54;
+  width: 118px;
+  height: 35.7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+}
+
+.enroll-button-link{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: #F2F2F2;
+}
+
+.enroll-button-link:hover {
+  opacity: 80%;
+}

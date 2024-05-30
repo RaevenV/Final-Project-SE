@@ -18,13 +18,13 @@ function SubModuleItem(props) {
                   <YouTubeThumbnail videoId={props.videoId} videoUrl={props.videoUrl}/>
                 </div>
                 <div className="submodule-section">
-                  <strong className="semibold-strong">{props.chapterTitle1}</strong>
+                  <strong className="semibold-strong">1. {props.chapterTitle1}</strong>
                   <div className="submodule-body" style={{fontSize:"14px", marginLeft:"20px", marginTop:"5px"}}>
                     {props.chapterDesc1}
                   </div>
                 </div>
                 <div className="submodule-section">
-                  <strong className="semibold-strong">{props.chapterTitle2}</strong>
+                  <strong className="semibold-strong">2. {props.chapterTitle2}</strong>
                   <div className="submodule-body" style={{fontSize:"14px", marginLeft:"20px", marginTop:"5px"}}>
                     {props.chapterDesc2}
                   </div>

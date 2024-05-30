@@ -1,6 +1,6 @@
 import React from "react";
 import "./forumCard.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ForumCard(props) {
 
@@ -19,7 +19,8 @@ function ForumCard(props) {
           <img src="./peopleIcon.png" alt="" className="peopleIcon" />
           <h1 className="peopleTotal">{props.people}</h1>
           <h1 className="peopleText">People</h1>
-          <Link className="button-box-green" onClick={handleClick(props.title)}>join</Link>
+          <button className="button-box-green" 
+          onClick={() => handleClick(props.title)}>join</button>
         </div>
       </div>
     </div>

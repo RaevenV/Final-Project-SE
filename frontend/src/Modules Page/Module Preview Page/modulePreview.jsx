@@ -1,13 +1,13 @@
 import React from "react";
 import HomeNavbar from "../../Universal Components/navbars/homeNavbar";
 import Footer from "../../Universal Components/footer";
-import ModuleDesc from "./ModuleDesc/moduleDesc";
 import SubModuleItem from "./SubModule/subModuleItem"
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import "./SubModule/subModule.css"
+import "./ModuleDesc/moduleDesc.css"
 
 function ModulePreview() {
   const {searchID} = useParams();
@@ -82,8 +82,8 @@ function ModulePreview() {
                 headingID={`heading${moduleIndex}-${subModuleIndex}`}
                 collapseID={`collapse${moduleIndex}-${subModuleIndex}`}
                 target={`#collapse${moduleIndex}-${subModuleIndex}`}
-                submoduleTitle={subModule.title}
-                videoId={subModule.videoId}
+                submoduleTitle={`${subModuleIndex+1}. ${subModule.title}`}
+                videoId={subModule.videoID}
                 videoUrl={subModule.videoLink}
                 chapterTitle1={subModule.chapterTitle1}
                 chapterDesc1={subModule.chapterDesc1}
