@@ -3,9 +3,25 @@
   font-weight: 600;
 }
 
+.top-picks-title-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.top-picks-wrapper{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .top-picks-books{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 60%;
+  width: 100%;
   margin-top: 20px;
 }

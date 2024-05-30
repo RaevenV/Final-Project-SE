@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./searchBar.css";
-import "./librarySearchBar.css";
 import "./moduleSearchbar.css";
+import "./librarySearchBar.css";
 import { db } from "../../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import BookTemplate from "../Book Template/bookTemplate";
+import { useNavigate } from "react-router-dom";
 
 function LibrarySearchbar() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState([]);
   const [filter, setFilter] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (value) => {
     setInput(value);
@@ -92,6 +94,7 @@ function LibrarySearchbar() {
 
         <div className="dropdown">
           <button
+            id="filterBtn"
             className="btn btn-secondary dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
@@ -162,7 +165,7 @@ function LibrarySearchbar() {
         <div id="result-wrapper-library">
           {result.map((book, index) => (
             <div className="library-cart-wrapper" key={index}>
-              <BookTemplate img={book.coverImg} title={book.title} />
+              <BookTemplate img={book.coverImg} title={book.title}  />
             </div>
           ))}
         </div>

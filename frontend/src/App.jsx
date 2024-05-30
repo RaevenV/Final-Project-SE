@@ -13,6 +13,7 @@ import ModulePreview from "./Modules Page/Module Preview Page/modulePreview";
 import SplashPage from "./Splash Page/splashPage";
 import ForumPreviewPage from "./Forum Page/Forum Preview Page/forumPreviewPage"
 import ForumPage from "./Forum Page/forumPage";
+import BookView from "./Library Page/bookViewPage/bookView";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" exact element = {<SplashPage/>}/>
           <Route path="/forumPage" exact element={<ForumPage />} />
           <Route path="/forumPreview/:searchParam" exact element={<ForumPreviewPage />} />
+          <Route path="/bookViewPage/:searchID" exact element = {<BookView/>}/>
         </Routes>
       </Router>
     </>

@@ -1,16 +1,20 @@
 import React from "react";
 import "./bookTemplate.css";
+import { Link } from "react-router-dom";
 
 function BookTemplate(props) {
   return (
     <>
-      <div className="book-template-container">
+      <Link
+        className="book-template-container" to={`/bookViewPage/${props.title}`}
+      >
         <img src={props.img} alt="" className="bookTemp1" />
-        <img src="rating-star.png" alt="" id="rating-star-template" />
-        <div className="bookTempTitle">{props.title}</div>
-      </div>
+        <img src="rating-star.png" alt="" id={props.id} />
+        <div className="bookTempTitle1">{props.title}</div>
+      </Link>
     </>
   );
 }
 
 export default BookTemplate;
+

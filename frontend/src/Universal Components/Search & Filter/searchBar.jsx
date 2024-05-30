@@ -115,6 +115,7 @@ function Searchbar() {
 
         <div className="dropdown">
           <button
+            id="filterBtn"
             className="btn btn-secondary dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"

@@ -1,84 +1,198 @@
-.bookView-container{
-    display: flex;
-    margin-top: 150px;
-    margin-left: 120px;
-    margin-bottom: 150px;
+.bookView-wrapper {
+  width: 100%;
+  height: 500px;
+  padding: 0 8.5%;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
-.bookDetails-container{
-   margin-left: 75px;
+.bookView-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.bookDetails-miniContainer{
-    width: 350px;
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-between;
+.bookDetails-container {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-.bookViewTitle{
-    font-size: 24px;
-    font-weight: 600;
+.bookViewCover1 {
+  width: 27%;
+  height: 100%;
 }
 
-.bookViewAuthor{
-    color: #136E54;
-    margin-top: 2px;
-    font-size: 15px;
-    margin-left: 5px;
+.bookDetails-miniContainer {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.bookStars{
-    font-size: 15px;
-    margin-right: 10px;
+.bookViewTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
-.bookRating{
-    font-size: 15px;
-    margin-right: 10px;
+.bookViewAuthor {
+  color: #136e54;
+  margin-top: 2px;
+  font-size: 15px;
+  margin-left: 5px;
 }
 
-.bookPages{
-    font-size: 15px;
-    margin-right: 10px;
+.bookStars {
+  font-size: 15px;
+  margin-right: 10px;
 }
 
-.dividerLineTop{
-    border-top: 3px solid black;
-    margin-bottom: 20px;
+.bookRating {
+  font-size: 15px;
+  margin-right: 10px;
 }
 
-.dividerLineBottom{
-    border-top: 3px solid black;
-    margin-top: 225px;
+.bookPages {
+  font-size: 15px;
+  margin-right: 10px;
 }
-.author-wrapper{
-    display: flex;
+
+.dividerLineTop {
+  border: 1.5px solid var(--black);
+  width: 100%;
+  margin-bottom: 20px;
+  opacity: 70% !important;
+  margin-top: -50px;
+}
+
+.dividerLineBottom {
+  border: 1.5px solid black;
+  width: 100%;
+  opacity: 70% !important;
+  margin-top: -20px;
+}
+.author-wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.bookDesc {
+  margin-top: -20px;
+}
+
+#rating-star {
+  width: 70px;
+  height: 12px;
+  margin-top: 2px;
+}
+
+.ratingContainer {
+  display: flex;
+}
+
+.rating-star-container {
+  display: flex;
+}
+
+.ratingText {
+  font-size: 15px;
+}
+
+.pagesContainer {
+  display: flex;
+}
+
+.pagesText {
+  font-size: 15px;
+}
+
+.detailSection-container {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -50px;
+}
+
+@media (max-width: 961px) {
+  .bookViewCover1 {
+    width: 30%;
+    height: 90%;
+  }
+  .detailSection-container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .bookDetails-miniContainer {
+    width: 80%;
+  }
+
+  .bookView-wrapper {
+    height: 470px;
+  }
+
+  .dividerLineTop {
+    border: 1.5px solid var(--black);
+    width: 100%;
     margin-bottom: 10px;
+    opacity: 70% !important;
+  }
 }
 
-#rating-star{
-    width: 70px;
-    height: 12px;
-    margin-top: 2px;
-}
+@media (max-width: 767px) {
 
-.ratingContainer{
-    display: flex;
-}
+    .bookView-wrapper{
+        padding: 0 5%;
+    }
+  .bookViewCover1 {
+    width: 35%;
+    height: 90%;
+  }
+  .detailSection-container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 
-.rating-star-container{
-    display: flex;
-}
+  .bookDetails-miniContainer {
+    width: 80%;
+  }
 
-.ratingText{
-    font-size: 15px;
-}
+  .bookDetails-container {
+    width: 65%;
+  }
 
-.pagesContainer{
-    display: flex;
-}
+  .bookView-container{
+    column-gap: 20px;
+  }
 
-.pagesText{
-    font-size: 15px;
+  .bookViewTitle{
+    font-size: 20px;
+  }
+
+  .bookViewAuthor{
+    font-size: 13px;
+  }
+
+  .bookView-wrapper {
+    height: 470px;
+  }
+
+  .dividerLineTop {
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 70% !important;
+  }
+
+  .dividerLineBottom{
+    border: none;
+  }
 }

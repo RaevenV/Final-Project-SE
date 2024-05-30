@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./searchBar.css";
 import "./moduleSearchbar.css";
+import "./librarySearchBar.css";
 import { db } from "../../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import ModuleCart from "../Module Cart/moduleCart";
@@ -108,6 +109,7 @@ function ModuleSearchbar() {
 
         <div className="dropdown">
           <button
+            id="filterBtn"
             className="btn btn-secondary dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"

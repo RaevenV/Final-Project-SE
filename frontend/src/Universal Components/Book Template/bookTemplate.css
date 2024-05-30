@@ -5,7 +5,13 @@
     gap: 10px; 
     width: 100%;
     padding: 0 14px;
-    text-align: center;
+    text-align: center !important;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.book-template-container:hover{
+    color: var(--orange);
 }
 
 .bookTemp1 {
@@ -16,10 +22,16 @@
 #rating-star-template {
     width: 70%;
     height: 24px auto;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
-.bookTempTitle {
+#rating-star-template2 {
+    width: 50%;
+    height: 24px auto;
+    margin-top: 10px;
+}
+
+.bookTempTitle1 {
     font-size: 15px;
     text-align: center !important;
     height: 70px;
