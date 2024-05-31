@@ -50,3 +50,23 @@
     font-size: 16px;
     font-weight: 500;
 }
+
+@media (min-width:767px) {
+
+    .reply-postcard-information{
+        padding-right: 5%;
+    }
+
+    .reply-postcard-container{
+        margin-left: 28px;
+    }
+}
+
+@media (max-width:767px){
+    .reply-postcard-wrapper{
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

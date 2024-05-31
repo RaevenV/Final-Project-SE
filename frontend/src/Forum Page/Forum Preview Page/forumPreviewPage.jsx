@@ -10,12 +10,12 @@ import "../postCard/postCard.css";
 
 function ForumPreviewPage() {
   const [showTextBox, setShowTextBox] = useState(false);
-  const [replyInput, setReplyInput] = useState(""); // New state for reply input
-  const [selectedPostId, setSelectedPostId] = useState(null); // State to track selected post for reply
+  const [replyInput, setReplyInput] = useState("");
+  const [selectedPostId, setSelectedPostId] = useState(null); 
 
   const replyButtonClick = (postId) => {
     setShowTextBox(!showTextBox);
-    setSelectedPostId(postId); // Set the selected post ID for the reply
+    setSelectedPostId(postId); 
   }
 
   const { searchParam } = useParams();
@@ -65,7 +65,7 @@ function ForumPreviewPage() {
             }
 
             forumPosts.push({
-              id: forumPostDoc.id, // Include the post ID
+              id: forumPostDoc.id,
               createdAt: post.createdAt instanceof Timestamp ? post.createdAt.toDate().toLocaleString() : post.createdAt,
               likeCount: post.likeCount,
               postContent: post.postContent,
@@ -95,31 +95,27 @@ function ForumPreviewPage() {
     findData();
   }, [searchParam]);
 
-  // Step 2: Handle Reply Submission
   const handleReplySubmit = async () => {
-    if (replyInput.trim() === "" || !selectedPostId) return; // Prevent empty replies
+    if (replyInput.trim() === "" || !selectedPostId) return; 
 
     const newReply = {
       replyContent: replyInput,
       replyCreatedAt: Timestamp.fromDate(new Date()),
       replyLikeCount: 0,
-      replySender: "Your Username",  // Replace with actual username logic
-      replyUid: "User UID"  // Replace with actual user UID logic
+      replySender: "Your Username",
+      replyUid: "User UID"
     };
 
     try {
       await addDoc(collection(db, `forum/forum1/forumPost/${selectedPostId}/replies`), newReply);
-      setReplyInput("");  // Clear input field after submission
-      setShowTextBox(false);  // Hide the text box after submission
-      // Optionally, refresh the posts or add the new reply to the state to show it immediately
-      // Fetch the updated post data to reflect the new reply
+      setReplyInput("");
+      setShowTextBox(false); 
       updateReplies(selectedPostId);
     } catch (error) {
       console.error("Error adding reply:", error);
     }
   };
 
-  // Function to update replies for a specific post
   const updateReplies = async (postId) => {
     try {
       const postRef = collection(db, `forum/forum1/forumPost/${postId}/replies`);

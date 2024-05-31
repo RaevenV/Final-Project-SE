@@ -1,89 +1,131 @@
-.postcard-container{
+.postcard-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 0 10px;
 }
 
-.postcard-wrapper{
-    padding-top: 12px;
-    padding-left: 12px;
-    padding-bottom: 20px;
-    width: 1118px;
+.postcard-wrapper {
+    padding: 12px;
+    width: 100%;
+    max-width: 1118px;
     background-color: var(--white);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.postcard-title{
-    font-size: 40px;
+.postcard-title {
+    font-size: 2.35rem;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.postcard-information{
+.postcard-information {
     display: flex;
+    flex-direction: column;
 }
 
-.postcard-profile{
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-top: 24px;
+.postcard-profile {
+    margin: 24px auto;
 }
 
-.postcard-forum-profile{
+.postcard-forum-profile {
     width: 50px;
 }
 
-.postcard-detail-container{
+.postcard-detail-container {
     margin-top: 16px;
-    width: 85%;
+    width: 100%;
+    text-align: center;
 }
 
-.postcard-username{
-    font-size: 20px; 
+.postcard-username, .postcard-time, .postcard-thread {
+    width: 100%;
+}
+
+.postcard-username {
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
-.postcard-time{
+.postcard-time {
     margin-top: 4px;
     margin-bottom: 8px;
     color: var(--darkGray);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
 }
 
-.postcard-interaction{
+.postcard-interaction {
     margin-top: 24px;
     margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
 }
 
-.postcard-reply{
-    margin-right: 20px;
-    margin-left: 20px;
+.postcard-reply {
+    margin: 0 20px;
 }
 
-.interactionButton{
+.interactionButton {
     border: none;
+    background: none;
+    padding: 0;
 }
 
-.reply-box{
+.reply-box {
     display: flex;
     margin-bottom: 20px;
+    width: 100%;
+    justify-content: center;
 }
 
-.replyinputbox{
+.replyinputbox {
     width: 95%;
 }
 
-.submitReply-button{
+.submitReply-button {
     border: none;
+    background: none;
 }
 
-.send-icon-button{
+.send-icon-button {
     width: 32px;
     margin-top: 4px;
     margin-left: 12px;
+}
+
+@media (min-width: 768px) {
+    .postcard-information {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .postcard-profile {
+        margin: 24px;
+    }
+
+    .postcard-detail-container {
+        width: 85%;
+    }
+
+    .postcard-username, .postcard-time, .postcard-thread {
+        text-align: left;
+    }
+
+    .postcard-interaction {
+        justify-content: flex-start;
+    }
+
+    .reply-box, .replyinputbox {
+        width: 100%;
+    }
+
+    .submitReply-button {
+        margin-left: 10px;
+    }
 }
