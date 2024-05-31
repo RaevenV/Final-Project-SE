@@ -1,12 +1,12 @@
 .continuelastcourse-container{
     width: 100%;
-    height: 148px;
+    height: auto;
     margin-bottom: 100px;
     margin-top: 60px;
 }
 
 .continue-trendingmodules-title{
-    text-align-last: center;
+    text-align: center;
     font-weight: 700;
     font-size: 40px;
     margin-bottom: 20px;
@@ -15,8 +15,49 @@
 .continuelastcourse-cards-container{
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 .continuemodule1{
     margin-right: 18px;
+}
+
+@media (max-width:961px) {
+    .continuelastcourse-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .continuelastcourse-cards-container{
+        flex-direction: column;
+        row-gap: 60px;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .continuemodule1{
+        margin-right: 0;
+    }
+
+    .continue-trendingmodules-title{
+        font-size: 30px;
+
+    }
+
+    .continuelastcourse-title{
+        margin-bottom: 40px;
+    }
+
+    .continuelastcourse-container{
+        margin-bottom: 50px;
+    }
+
+    
+}
+
+
+@media (max-width:767px) {
+    
 }

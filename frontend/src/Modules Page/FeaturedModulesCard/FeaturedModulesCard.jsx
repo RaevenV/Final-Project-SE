@@ -14,13 +14,13 @@ function FeaturedModulesCard(props) {
                         <div className="featuredmodules-detail-description">{props.featuredmodulesDescription}</div>
                     </div>
                     <div className="featuredmodules-mentor-container">
-                        <div>
-                            <img src={props.imgMentor} alt="" />
+                        <div className='mentorImg-container'>
+                            <img src={props.imgMentor} alt="" className='featuredmodules-mentor-img'/>
                         </div>
                         <div className="featuredmodules-mentor-description-wrapper">
                             <div className="featuredmodules-mentor-name">{props.mentorName}</div>
                             <div className="featuredmodules-mentor-position">{props.mentorPosition}</div>
-                            <img src="/rating-star.png" alt="" />
+                            <img src="/rating-star.png" alt="" className='featuredmodules-star' />
                         </div>
                     </div>
                     <div className='featuredmodules-enroll-button'>
