@@ -136,6 +136,7 @@
   .navbar{
     padding-bottom: 10px !important;
     padding-top: 10px !important;
+    justify-content: space-around;
   }
   .show {
     flex-direction: column;

@@ -40,10 +40,10 @@ function HomeNavbar(props) {
               </Link>
             </li>
           </ul>
+          <Link to="/profile" className="navbar-btn-wrapper2">
+            <img src="/profileLogo.png" className="profile-logo" />
+          </Link>
         </div>
-        <Link to="/profile" className="navbar-btn-wrapper2">
-          <img src="/profileLogo.png" className="profile-logo" />
-        </Link>
       </div>
     </nav>
   );
