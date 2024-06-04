@@ -14,6 +14,7 @@ import SplashPage from "./Splash Page/splashPage";
 import ForumPreviewPage from "./Forum Page/Forum Preview Page/forumPreviewPage"
 import ForumPage from "./Forum Page/forumPage";
 import BookView from "./Library Page/bookViewPage/bookView";
+import Subscription from "./Subscription Page/subscription";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/forumPage" exact element={<ForumPage />} />
           <Route path="/forumPreview/:searchParam" exact element={<ForumPreviewPage />} />
           <Route path="/bookViewPage/:searchID" exact element = {<BookView/>}/>
+          <Route path="/subscriptionPage" exact element={<Subscription/>}/>
         </Routes>
       </Router>
     </>

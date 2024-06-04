@@ -8,7 +8,7 @@ function HomeNavbar(props) {
   return (
     <nav className="navbar fixed-top navbar-expand-lg">
       <div className="container-fluid mb-2">
-        <Link to="/homePage" href="#" className="navbar-btn-wrapper">
+        <Link to="/home" href="#" className="navbar-btn-wrapper">
           <img src="/logo-clear.png" className="navlogo-img" alt="" />
         </Link>
         <button

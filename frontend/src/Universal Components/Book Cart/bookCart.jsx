@@ -1,14 +1,15 @@
 import React from 'react';
 import "./bookCart.css";
+import { Link } from 'react-router-dom';
 
 
 function BookCart(props) {
   return (
     <>
-      <div className={props.className}>
-        <img src={props.img} alt="" />
+      <Link to={`/bookViewPage/${props.title}`} className={props.className}>
+        <img src={props.img} alt="" id='bookCartImg' />
         <div className="bookTitle1">{props.title}</div>
-      </div>
+      </Link>
     </>
   );
 }

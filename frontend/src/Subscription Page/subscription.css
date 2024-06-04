@@ -1,0 +1,105 @@
+.subscription-container {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 100vh;
+  background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
+  background-color: var(--lightGreen);
+  padding-top: 80px;
+}
+
+.subscription-wrapper{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--black);
+    padding: 4% 3%;
+    border-radius: 16px;
+    box-shadow: 0 -1px 4px 0 var(--black);
+}
+
+
+.subscription-box{
+    height: 85%;
+    width: 25%;
+    background-color: var(--lightGray);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--black);
+}
+
+.subscription-box-wrapper{
+    width: 98%;
+    height: 98%;
+    padding: 10% 5%;
+    border: solid 0.5px var(--black);
+    background-color: transparent;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.subscription-title{
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--orange);
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.subscription-description{
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.subscription-price{
+    font-size: 20px;
+    font-weight: 600;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width:961px) {
+    .subscription-wrapper{
+        flex-direction: column;
+        row-gap: 30px;
+        width: 70%;
+        padding: 10% 0;
+    }
+    
+    .subscription-container{
+        height: auto;
+    }
+
+    .subscription-box{
+        width: 60%;
+        height: 350px;
+    }
+
+    .subscription-container{
+        padding: 120px 0;
+    }
+
+}
+

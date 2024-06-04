@@ -2,8 +2,8 @@ import React from "react";
 import "./trendingBooks.css";
 import trendingCover1 from '../../imageTrendingBooks/trendingCover1.png';
 import trendingCover2 from '../../imageTrendingBooks/trendingCover2.png';
-import trendingCover3 from '../../imageTrendingBooks/trendingCover3.png';
 import BookCart from "../../Universal Components/Book Cart/bookCart";
+import atomicCover from "/atomicHabits.jpg";
 
 function TrendingBooks() {
     return (
@@ -21,8 +21,8 @@ function TrendingBooks() {
               className="trendingCover2"
             />
             <BookCart
-              img={trendingCover3}
-              title="Easy Manage Stocks"
+              img={atomicCover}
+              title="Atomic Habits"
               className="trendingCover3"
             />
         </div>
