@@ -63,6 +63,8 @@ function ForumPreviewPage() {
                 uid: reply.replyUid,
               });
             }
+            forumReplies.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+
 
             forumPosts.push({
               id: forumPostDoc.id,
@@ -73,6 +75,7 @@ function ForumPreviewPage() {
               uid: post.uid,
               replies: forumReplies,
             });
+
           }
 
           forums.push({
@@ -98,11 +101,23 @@ function ForumPreviewPage() {
   const handleReplySubmit = async () => {
     if (replyInput.trim() === "" || !selectedPostId) return; 
 
+    const generateRandomName = () => {
+      const names = [
+        "Alex", "Jordan", "Taylor", "Morgan", "Riley",
+        "Casey", "Drew", "Skyler", "Quinn", "Jesse",
+        "Harper", "Avery", "Reese", "Rowan", "Peyton",
+        "Blake", "Kai", "Dakota", "Emerson", "Finley"
+      ];
+      const randomIndex = Math.floor(Math.random() * names.length);
+      return names[randomIndex];
+    };
+    
+
     const newReply = {
       replyContent: replyInput,
       replyCreatedAt: Timestamp.fromDate(new Date()),
       replyLikeCount: 0,
-      replySender: "Your Username",
+      replySender: generateRandomName(),
       replyUid: "User UID"
     };
 
@@ -134,6 +149,7 @@ function ForumPreviewPage() {
           uid: reply.replyUid,
         });
       }
+      forumReplies.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
       // Update the state with the new replies
       setResult(prevResult =>

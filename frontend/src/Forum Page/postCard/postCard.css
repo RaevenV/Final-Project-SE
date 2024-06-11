@@ -15,6 +15,11 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.replycard-container{
+    margin-bottom: 40px;
 }
 
 .postcard-title {
